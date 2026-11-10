@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>MES responsive QA</title>
+    <style>
+      body {
+        margin: 0;
+        background: #eef0f4;
+      }
+      iframe {
+        display: block;
+        border: 0;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe title="MES viewport" src="../"></iframe>
+    <script>
+      const params = new URLSearchParams(location.search);
+      const frame = document.querySelector('iframe');
+      frame.width = Math.max(320, Math.min(1920, Number(params.get('width')) || 390));
+      frame.height = Math.max(600, Math.min(1600, Number(params.get('height')) || 844));
+      document.body.style.width = frame.width + 'px';
+    </script>
+  </body>
+</html>

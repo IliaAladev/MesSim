@@ -1,0 +1,157 @@
+.carcass-panel {
+  margin: 20px 0;
+  padding: 0 0 20px;
+  border-bottom: 1px solid var(--line);
+}
+.carcass-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  margin: 16px 0;
+}
+.carcass-facts dt {
+  color: var(--muted);
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+.carcass-facts dd {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.carcass-details {
+  margin-top: 12px;
+}
+.carcass-details > summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 11px;
+}
+.carcass-identify {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+.carcass-identify .field {
+  flex: 1;
+  min-width: 200px;
+  margin: 0;
+}
+.carcass-identify > .plain-note,
+.carcass-identify > .check-control {
+  flex-basis: 100%;
+}
+.carcass-scan,
+.carcass-equipment {
+  display: grid;
+  gap: 7px;
+}
+.carcass-equipment {
+  justify-items: start;
+  margin: 16px 0;
+}
+.carcass-marking {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  margin: 16px 0;
+}
+.carcass-label-preview {
+  width: 270px;
+  max-width: 40%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+.carcass-marking h3 {
+  font-size: 13px;
+  font-weight: 500;
+}
+.carcass-marking p {
+  margin: 8px 0 4px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.carcass-marking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.carcass-marking-actions .button {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+.carcass-marking.compact {
+  padding: 12px 16px;
+}
+.carcass-carriers {
+  padding-top: 12px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.carcass-carriers summary {
+  cursor: pointer;
+}
+.carcass-carriers > div {
+  display: flex;
+  gap: 20px;
+  margin: 12px 0;
+}
+.carcass-carriers strong {
+  font-weight: 500;
+  color: #52657c;
+}
+.carcass-rebind {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+.carcass-rebind .field {
+  flex: 1;
+  min-width: 170px;
+  margin-bottom: 0;
+}
+.classification-mode {
+  display: grid;
+  gap: 12px;
+  margin: 16px 0;
+}
+.classification-mode .field {
+  max-width: 600px;
+}
+.classification-facts {
+  margin: 0;
+}
+.classification-repeat {
+  justify-self: start;
+}
+@media (max-width: 650px) {
+  .carcass-marking {
+    flex-direction: column;
+    align-items: start;
+  }
+  .carcass-label-preview {
+    max-width: 100%;
+    width: 270px;
+  }
+  .carcass-identify .field {
+    flex-basis: 100%;
+  }
+}
+
+.carcass-download {
+  margin: 16px 0;
+}
+.carcass-download .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}

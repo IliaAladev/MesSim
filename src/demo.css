@@ -1,0 +1,334 @@
+.demo-choices {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 14px;
+}
+.demo-choice {
+  display: grid;
+  gap: 7px;
+  text-align: left;
+  padding: 17px 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+}
+.demo-choice.active {
+  border-color: var(--blue);
+  background: #f5f7ff;
+  box-shadow: inset 3px 0 var(--blue);
+}
+.demo-choice strong {
+  font-size: 14px;
+}
+.demo-choice span {
+  color: #727d8e;
+  line-height: 1.6;
+}
+.demo-choice small {
+  color: var(--blue);
+}
+.mass-balance-note {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px 18px;
+  margin: 18px 0;
+  border: 1px solid #b9dacb;
+  border-radius: 5px;
+  background: #f2faf6;
+}
+.mass-balance-note.unbalanced {
+  background: #fff5ed;
+  border-color: #e9c3a6;
+}
+.mass-balance-note.pending {
+  background: #f6f8fc;
+  border-color: var(--line);
+}
+.mass-balance-note small {
+  color: #6b7881;
+}
+.badge.queued {
+  color: #6684a1;
+  background: #f1f5fa;
+}
+.operator-context {
+  display: grid;
+  grid-template-columns: minmax(180px, 280px) minmax(260px, 560px);
+  gap: 22px;
+  padding: 0 0 24px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;
+}
+.operator-context .field {
+  margin-bottom: 0;
+}
+.operator-context select {
+  width: 100%;
+}
+.operation-task-toolbar {
+  align-items: center;
+}
+.operation-task-toolbar > input {
+  width: 280px;
+}
+.operation-task-table {
+  min-width: 790px;
+}
+.operation-task-table td:first-child {
+  min-width: 220px;
+}
+.data-table.operation-task-table td {
+  white-space: normal;
+}
+.data-table.operation-task-table td:nth-child(2) {
+  max-width: 210px;
+}
+.data-table.operation-task-table td:nth-child(3) {
+  min-width: 140px;
+  max-width: 240px;
+}
+.data-table.operation-task-table .order-link {
+  white-space: normal;
+  text-align: left;
+  line-height: 1.55;
+}
+.operator-operation-context {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 150px;
+  gap: 25px;
+  padding: 0 0 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.operator-operation-context > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.operator-operation-context span,
+.operator-operation-context small {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.operator-operation-context strong {
+  font-size: 13px;
+  line-height: 1.6;
+}
+.operator-operation-body {
+  max-width: 1080px;
+}
+.operation-start-actions,
+.operation-complete-actions,
+.operation-state-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+.operation-state-actions {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;
+  padding-top: 0;
+}
+.operation-state-actions > span {
+  color: #758496;
+}
+.operation-start-actions > .button,
+.operation-state-actions > .button {
+  flex-shrink: 0;
+}
+@media (max-width: 720px) {
+  .operator-context,
+  .operator-operation-context {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .operation-task-toolbar > input {
+    width: 100%;
+  }
+  .operation-start-actions,
+  .operation-state-actions,
+  .operation-complete-actions {
+    flex-wrap: wrap;
+  }
+}
+.line-grid:empty {
+  display: none;
+}
+.order-plan-editor {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  margin: 16px 0;
+}
+.order-plan-editor .field {
+  margin: 0;
+  flex: 1;
+}
+.order-supply-note {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+  line-height: 1.5;
+}
+.order-supply-table {
+  min-width: 0;
+}
+.order-supply-table td {
+  white-space: normal;
+}
+.registry-filters,
+.registry-pagination,
+.dispatch-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0;
+}
+.registry-filters input,
+.registry-filters select,
+.registry-pagination select,
+.dispatch-toolbar input {
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: #fff;
+  min-height: 32px;
+}
+.registry-filters .registry-search {
+  flex: 1;
+  min-width: 210px;
+  width: auto;
+}
+.registry-filters label,
+.registry-pagination label,
+.dispatch-toolbar label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+}
+.registry-pagination > span:first-child {
+  margin-right: auto;
+}
+.registry-pagination {
+  margin: 14px 0 28px;
+}
+.history-table td {
+  white-space: normal;
+  line-height: 1.6;
+  vertical-align: top;
+}
+.history-table td:first-child {
+  white-space: nowrap;
+}
+.registry-text-link {
+  text-align: left;
+  line-height: 1.6;
+  padding: 0;
+}
+.registry-text-link:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+.registry-detail-text {
+  line-height: 1.7;
+  margin-top: 16px;
+}
+.event-list .event {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  align-items: start;
+}
+.event-list .event time {
+  white-space: normal;
+}
+.operation-mtu {
+  padding: 0 0 20px;
+  margin: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.mtu-entry {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: end;
+  margin-top: 14px;
+}
+.mtu-entry .field {
+  flex: 1;
+  min-width: 160px;
+  margin: 0;
+}
+.mtu-entry .editor-error {
+  width: 100%;
+}
+.operation-record dd small {
+  display: block;
+  margin-top: 4px;
+}
+.app-loading {
+  padding: 40px;
+  color: var(--muted);
+}
+@media (max-width: 720px) {
+  .registry-filters .registry-search {
+    flex-basis: 100%;
+  }
+  .registry-pagination {
+    gap: 8px;
+  }
+  .registry-pagination > span:first-child {
+    flex-basis: 100%;
+  }
+  .event-list .event {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .mtu-entry .field {
+    flex-basis: 100%;
+  }
+}
+.events-table {
+  table-layout: fixed;
+  min-width: 1000px;
+}
+.events-table th:nth-child(1) {
+  width: 158px;
+}
+.events-table th:nth-child(2) {
+  width: 100px;
+}
+.events-table th:nth-child(3) {
+  width: 110px;
+}
+.events-table th:nth-child(4) {
+  width: 140px;
+}
+.events-table th:nth-child(6) {
+  width: 140px;
+}
+.events-table td:nth-child(4) {
+  white-space: nowrap;
+}
+
+.order-reservation-row {
+  margin: 16px 0;
+}
+.order-reservation-row .field {
+  margin-bottom: 10px;
+}
+.bom-list small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+}
+.mtu-entry .mtu-replacement {
+  flex-basis: 100%;
+  margin: 0;
+}

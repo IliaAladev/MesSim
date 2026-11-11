@@ -363,7 +363,7 @@ function MESApp({ initial }) {
               )}
               {page === 'lots' && (
                 <button className="button primary" onClick={() => setModal('receive')}>
-                  {store.scenarioId === 'agro' ? 'Принять живка' : 'Принять материал'}
+                  Приёмка
                 </button>
               )}
             </div>
